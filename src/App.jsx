@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
@@ -48,12 +48,12 @@ function AppLayout() {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ListingsProvider>
         <WishlistProvider>
           <AppLayout />
         </WishlistProvider>
       </ListingsProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
